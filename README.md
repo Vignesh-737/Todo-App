@@ -44,7 +44,7 @@ A simple **full-stack To-Do List web app** built with **Node.js, Express.js, EJS
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repo-url>
+git clone https://github.com/Vignesh-737/Todo-App.git
 cd comments-app
 ```
 
