@@ -3,8 +3,9 @@ const app=express();
 const path=require("path");
 const mo=require("method-override");
 app.use(mo("_method"))
+const {nanoid}=require("nanoid")
 
-app.set("views", path.join(__dirname,"views"));
+app.set ("views", path.join(__dirname,"views"));
 app.set("view engine", "ejs")
 app.use(express.urlencoded({extended:true}));
 
@@ -20,7 +21,7 @@ app.get("/todolist/new",(req,res)=>{
 
 app.post("/todolist",(req,res)=>{
     const {name}=req.body;
-    let idno=todoList.length;
+    let idno=nanoid(5);
     todoList.push({ name, createdAt: Date.now(), id: idno });
     res.redirect("/todolist")
 })

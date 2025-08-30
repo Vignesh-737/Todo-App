@@ -14,19 +14,23 @@
   <div class="card-body">
     
     <% for (let t of todoList) { %>
-        <h5>
+        <h1>
             <b><%= t.name %></b> 
+        </h1>
+        <br>
+        <h6>
             : Created at <%= new Date(t.createdAt).toLocaleString() %> 
-            : ID <%= t.id + 1%>
-            
+                       
             <!-- Edit button -->
             <a href="/todolist/<%= t.id %>" class="btn btn-info">Edit</a>
 
             <!-- Delete button (form with method-override) -->
+          
             <form action="/todolist/<%= t.id %>?_method=DELETE" method="post" style="display:inline;">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
-        </h5>
+        </h6>
+      <hr>
     <% } %>
  </div>
   <div class="card-footer text-body-secondary">
