@@ -62,7 +62,7 @@ node index.js
 
 ### 4. Open the app
 
-Visit: `http://localhost:3000/todos`
+Visit: `http://localhost:3000/todolist`
 
 ---
 
@@ -97,7 +97,6 @@ comments-app/
 * Integrate **MongoDB** for persistent storage
 * Add **task completion toggle**
 * Implement **user authentication**
-* Deploy live on **Render.com** or **Railway**
 * Enhance UI with **Bootstrap components and icons**
 
 ---
